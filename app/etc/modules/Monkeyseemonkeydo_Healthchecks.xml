@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    Monkeyseemonkeydo
+* @package     Monkeyseemonkeydo_Healthchecks
+*/
+-->
+<config>
+    <modules>
+        <Monkeyseemonkeydo_Healthchecks>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Cron/>
+            </depends>
+        </Monkeyseemonkeydo_Healthchecks>
+    </modules>
+</config>

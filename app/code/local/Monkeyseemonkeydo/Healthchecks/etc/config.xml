@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    Monkeyseemonkeydo
+* @package     Monkeyseemonkeydo_Healthchecks
+*/
+-->
+<config>
+    <modules>
+        <Monkeyseemonkeydo_Healthchecks>
+            <version>0.0.1</version>
+        </Monkeyseemonkeydo_Healthchecks>
+    </modules>
+    <global>
+        <models>
+            <healthchecks>
+                <class>Monkeyseemonkeydo_Healthchecks_Model</class>
+            </healthchecks>
+        </models>
+    </global>
+    <crontab>
+        <jobs>
+            <healthchecks>
+                <schedule>
+                    <cron_expr>0 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>healthchecks/cron::sendPing</model>
+                </run>
+            </healthchecks>
+        </jobs>
+    </crontab>
+    <default>
+        <system>
+            <cron>
+                <healthcheck_enabled>0</healthcheck_enabled>
+            </cron>
+        </system>
+    </default>
+</config>
